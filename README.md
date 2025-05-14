@@ -7,7 +7,7 @@ A comprehensive, step-by-step collection of hands-on labs for deploying, configu
 ## 📖 Table of Contents
 
 - [OpenStack Hands-On Project](#openstack-hands-on-project)
-  - [📖 Table of Contents](#-table-of-contents)
+  - [Table of Contents](#-table-of-contents)
   - [Overview](#overview)
   - [Labs Included](#labs-included)
   - [Prerequisites](#prerequisites)
