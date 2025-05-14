@@ -7,15 +7,15 @@ A comprehensive, step-by-step collection of hands-on labs for deploying, configu
 
 ## 📖 Table of Contents
 
-1. [Overview](#overview)  
-2. [Labs Included](#labs-included)  
-3. [Prerequisites](#prerequisites)  
-4. [Project Structure](#project-structure)  
-5. [Getting Started](#getting-started)  
-6. [How to Work Through the Labs](#how-to-work-through-the-labs)  
-7. [Contributing](#contributing)  
-8. [About the Author](#about-the-author)  
-9. [License](#license)  
+1. [Overview]
+2. [Labs Included]
+3. [Prerequisites]
+4. [Project Structure]  
+5. [Getting Started]  
+6. [How to Work Through the Labs]
+7. [Contributing] 
+8. [About the Author]
+9. [License]
 
 ---
 
