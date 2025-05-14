@@ -6,15 +6,18 @@ A comprehensive, step-by-step collection of hands-on labs for deploying, configu
 
 ## 📖 Table of Contents
 
-1. [Overview](#overview)  
-2. [Labs Included](#labs-included)  
-3. [Prerequisites](#prerequisites)  
-4. [Project Structure](#project-structure)  
-5. [Getting Started](#getting-started)  
-6. [How to Work Through the Labs](#how-to-work-through-the-labs)  
-7. [Contributing](#contributing)  
-8. [About the Author](#about-the-author)  
-9. [License](#license)  
+- [OpenStack Hands-On Project](#openstack-hands-on-project)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [Overview](#overview)
+  - [Labs Included](#labs-included)
+  - [Prerequisites](#prerequisites)
+  - [Lab Environment Setup](#lab-environment-setup)
+  - [Project Structure](#project-structure)
+  - [Getting Started](#getting-started)
+  - [How to Work Through the Labs](#how-to-work-through-the-labs)
+  - [Contributing](#contributing)
+  - [About the Author](#about-the-author)
+  - [License](#license)
 
 ---
 
@@ -56,6 +59,61 @@ Each lab is self-contained under `labs/lab-<n>/lab-<n>-README.md` with full comm
 - `kubectl` (if testing on a Kubernetes-backed overcloud)  
 - Access to the undercloud & overcloud endpoints (credentials in RC files)  
 - Administrator (sudo) privileges on your lab host
+
+---
+
+## Lab Environment Setup
+
+To set up your environment to perform all labs end-to-end, follow these steps:
+
+1. **Control Host Requirements**  
+   - OS: RHEL 8/CentOS 8 or Ubuntu 20.04 LTS (64‑bit)  
+   - Minimum: 8 GB RAM, 4 CPU cores, 50 GB disk space  
+   - Network: Internet access and connectivity between control and lab nodes
+
+2. **Install CLI Tools**  
+   ```bash
+   # On RHEL/CentOS:
+   sudo yum install -y python3-tripleoclient python3-openstackclient
+   # On Ubuntu:
+   sudo apt update
+   sudo apt install -y python3-tripleoclient python3-openstackclient
+
+   # OpenShift CLI (oc) and kubectl:
+   curl -sL https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz \
+     | tar xz -C /usr/local/bin oc kubectl
+
+   # Kubernetes CLI:
+   sudo apt install -y kubectl
+   ```
+
+3. **Configure Host Machine**  
+   - Enable or open firewall rules for required ports (5000, 80, 443).  
+   - Ensure passwordless SSH (public key) between control host and undercloud/overcloud nodes.
+
+4. **Prepare Undercloud Node**  
+   - Set hostname and static IP according to lab instructions.  
+   - (Optional) Disable NetworkManager if using static network configuration:
+     ```bash
+     sudo systemctl disable NetworkManager
+     sudo systemctl stop NetworkManager
+     ```
+
+5. **Create and Source RC Files**  
+   - Follow Lab 2 to generate `undercloudrc` and `overcloudrc` with correct endpoints and credentials:
+     ```bash
+     source undercloudrc
+     source overcloudrc
+     ```
+
+6. **Verify Environment**  
+   ```bash
+   openstack image list
+   oc version
+   kubectl version --client
+   ```
+
+Once complete, you’re ready to start with Lab 1.
 
 ---
 
