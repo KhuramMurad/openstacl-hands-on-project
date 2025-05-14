@@ -64,27 +64,25 @@ Each lab is self-contained under `labs/lab-<n>/lab-<n>-README.md` with full comm
 ## Project Structure
 
 ```
-
-.
-├── LICENSE
-├── README.md
-└── labs
-├── lab-1
-│   └── lab-1-README.md
-├── lab-2
-│   └── lab-2-README.md
-├── lab-3
-│   └── lab-3-README.md
-├── lab-4
-│   └── lab-4-README.md
-├── lab-5
-│   └── lab-5-README.md
-├── lab-6
-│   └── lab-6-README.md
-├── lab-7
-│   └── lab-7-README.md
-└── lab-8
-└── lab-8-README.md
+├── project
+│   └── labs
+│       ├── lab-1
+│       │   └── lab-1-README.md
+│       ├── lab-2
+│       │   └── lab-2-README.md
+│       ├── lab-3
+│       │   └── lab-3-README.md
+│       ├── lab-4
+│       │   └── lab-4-README.md
+│       ├── lab-5
+│       │   └── lab-5-README.md
+│       ├── lab-6
+│       │   └── lab-6-README.md
+│       ├── lab-7
+│       │   └── lab-7-README.md
+│       └── lab-8
+│           └── lab-8-README.md
+└── README.md
 
 ````
 
