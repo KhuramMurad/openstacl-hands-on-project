@@ -66,10 +66,6 @@ Each lab is self-contained under `labs/lab-<n>/lab-<n>-README.md` with full comm
 ```
 ![image](https://github.com/user-attachments/assets/be0fd507-835e-4b31-9314-0ef150eef8b3)
 
-
-````
-````
-
 ---
 
 ## Getting Started
